@@ -1,0 +1,105 @@
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	font-size: calc(16px + (24  - 16) * (100vw - 320px)/(1600 - 320));
+}
+body, button, input {
+	color: #17181c;
+	font: 1em/1.5 "Hind", sans-serif;
+}
+body {
+	background: #e3e4e8;
+	overflow: auto;
+}
+form {
+	padding: 1.5em 0.75em 0 0.75em;
+	max-width: 27em;
+}
+canvas, input, label {
+	display: block;
+}
+canvas, form {
+	margin: auto;
+}
+button, input {
+	border: 0;
+	-webkit-appearance: none;
+	width: 100%;
+}
+label {
+	font-weight: bold;
+}
+button, button:disabled:hover, button:disabled:active  {
+	background: #255ff4;
+}
+button {
+	border-radius: 0.375em;
+	color: #fff;
+	cursor: pointer;
+	padding: 0.5em 1em;
+	transition: background 0.15s linear;
+}
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+button:hover {
+	background: #0b46da;
+}
+input {
+	margin-bottom: 0.75em;
+	padding: 0.375em;
+}
+input[type=number] {
+	border-radius: 0.2em;
+	box-shadow: 0 0 0 1px #abafba inset;
+	width: 4.5em;
+}
+button, hr, p {
+	margin-bottom: 1.5em;
+}
+hr {
+	border-top: 1px solid #abafba;
+	margin-top: -1px;
+}
+.form-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+.form-group-col {
+	flex-basis: 100%;
+}
+.label-tip {
+	color: #5c6270;
+	font-weight: normal;
+}
+@media screen and (min-width: 481px) {
+	button {
+		width: auto;
+	}
+	.form-group-col {
+		flex-basis: 50%;
+	}
+}
+@media screen and (prefers-color-scheme: dark) {
+	body, input {
+		color: #e3e4e8;
+	}
+	body {
+		background: #17181c;
+	}
+	input[type=number] {
+		background: #2e3138;
+		box-shadow: 0 0 0 1px #2e3138 inset;
+	}
+	hr {
+		border-top: 1px solid #454954;
+	}
+	.label-tip {
+		color: #8f95a3;
+	}
+}

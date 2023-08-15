@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Image Emojifier</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Hind:400,700'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form action="">
+	<p>Turn any image into emojis!</p>
+	<div class="form-group">
+		<div class="form-group-col">
+			<label for="emoji_size">Emoji Size <span class="label-tip">(6&ndash;64px)</span></label>
+			<input id="emoji_size" type="number" name="emoji_size" min="6" max="64" value="10" required>
+		</div>
+		<div class="form-group-col">
+			<label for="img_upload">Upload Image</label>
+			<input id="img_upload" type="file" name="img_upload" required>
+		</div>
+	</div>
+	<button type="submit" disabled>Emojify!</button>
+	<hr>
+</form>
+<canvas width="300" height="300" aria-label="Output"></canvas>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
